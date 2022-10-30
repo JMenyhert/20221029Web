@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*CSS clear*/
 *{
     margin:0;
     padding: 0;
@@ -5,6 +7,9 @@
 }
 html{
     font-size: 14px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
 }
 #container{
     max-width: 1200px;
@@ -18,7 +23,6 @@ html{
     padding: 5px 0;
 }
 #content .news{
-    padding: 10px;
     max-width: 49.99999%;
     float:left;
     text-align: justify;
@@ -26,6 +30,15 @@ html{
     font-size: 0.8rem;
 }
 
+#content .news:first-child{
+  padding-right: 10px;
+}
+
+#content .news:nth-child(2){
+  padding-left: 10px;
+}
+
+/*How To Clear Floats (Clearfix)*/
 #content::after, #nav ul::after {
     content: "";
     clear: both;
@@ -43,6 +56,11 @@ html{
     border-right: 1px dotted black;
 
   }
+/*Ha egy adott osztály x-dik elemére szeretnénk, hogy vonatkozzon*/
+#nav ul li:last-child{
+  border-right: none;
+}
+
 
 #nav ul li a{
     background: orange;
